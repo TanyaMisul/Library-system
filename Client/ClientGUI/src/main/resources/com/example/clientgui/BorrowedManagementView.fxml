@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="641.0" prefWidth="780.0" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.clientgui.BorrowedManagementController">
+   <children>
+      <TableView fx:id="projectsTable" layoutX="173.0" layoutY="14.0" prefHeight="610.0" prefWidth="591.0">
+        <columns>
+          <TableColumn fx:id="colName" prefWidth="169.4000244140625" text="Название" />
+            <TableColumn fx:id="colAuthor" prefWidth="150.5999755859375" text="Автор" />
+            <TableColumn fx:id="colGenre" prefWidth="123.20001220703125" text="Жанр" />
+            <TableColumn fx:id="colAmount" prefWidth="56.0" text="Кол-во" />
+           <TableColumn fx:id="colDate" prefWidth="92.0" text="До" />
+        </columns>
+      </TableView>
+      <Button layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#onGoBack" prefHeight="26.0" prefWidth="154.0" text="Назад" />
+      <Accordion layoutX="14.0" layoutY="47.0" prefHeight="208.0" prefWidth="154.0">
+        <panes>
+          <TitledPane animated="false" prefHeight="361.0" prefWidth="208.0" text="Выдача">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefWidth="204.0">
+                     <children>
+                        <Button layoutY="36.0" mnemonicParsing="false" onAction="#onAdd" prefHeight="26.0" prefWidth="154.0" text="Выдать" />
+                        <Button layoutY="5.0" mnemonicParsing="false" onAction="#onDel" prefHeight="26.0" prefWidth="154.0" text="Принять" />
+                     </children></AnchorPane>
+            </content>
+          </TitledPane>
+          <TitledPane animated="false" prefHeight="155.0" prefWidth="204.0" text="Инструменты">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefWidth="204.0">
+                     <children>
+                        <Button layoutY="5.0" mnemonicParsing="false" onAction="#onReport" prefHeight="26.0" prefWidth="154.0" text="Отчет" />
+                         <Button layoutY="36.0" mnemonicParsing="false" onAction="#onReportText" prefHeight="26.0" prefWidth="154.0" text="Выписка" />
+                        <Button layoutY="67.0" mnemonicParsing="false" onAction="#onSendEmail" prefHeight="26.0" prefWidth="154.0" text="Уведомить о просрочке" />
+
+                     </children>
+                  </AnchorPane>
+            </content>
+          </TitledPane>
+            <TitledPane animated="false" prefWidth="204.0" text="Поиск и фильтрация">
+                <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefWidth="204.0">
+                     <children>
+                         <TextField fx:id="nameSearchInput" layoutY="5.0" prefHeight="26.0" prefWidth="154.0" promptText="Название" />
+                         <TextField fx:id="genreSearchInput" layoutY="36.0" prefHeight="26.0" prefWidth="154.0" promptText="Жанр" />
+                         <TextField fx:id="authorSearchInput" layoutY="67.0" prefHeight="26.0" prefWidth="154.0" promptText="Автор" />
+                         <Button layoutY="98.0" mnemonicParsing="false" onAction="#onApply" prefHeight="26.0" prefWidth="154.0" text="Применить" />
+                     </children></AnchorPane>
+                </content>
+            </TitledPane>
+        </panes>
+      </Accordion>
+   </children>
+</AnchorPane>

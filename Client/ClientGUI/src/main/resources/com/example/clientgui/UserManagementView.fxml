@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="556.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.clientgui.UserManagementController">
+    <children>
+        <TableView fx:id="usersTable" layoutX="123.0" layoutY="14.0" prefHeight="372.0" prefWidth="418.0">
+            <columns>
+                <TableColumn fx:id="columnFullName" prefWidth="203.0" text="ФИО" />
+                <TableColumn fx:id="columnAge" prefWidth="51.0" text="Возраст" />
+                <TableColumn fx:id="columnSex" prefWidth="60.0" text="Пол" />
+                <TableColumn fx:id="columnStatus" prefWidth="103.0" text="Статус" />
+            </columns>
+        </TableView>
+        <Button layoutX="10.0" layoutY="14.0" mnemonicParsing="false" onAction="#onGoBack" prefHeight="26.0" prefWidth="102.0" text="Назад" />
+        <Accordion layoutX="5.0" layoutY="48.0" prefHeight="338.0" prefWidth="101.0">
+            <panes>
+                <TitledPane animated="false" prefHeight="288.0" prefWidth="75.0" text="Управление">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="101.0">
+                            <children>
+                                <Button fx:id="btnEdit" layoutY="6.0" mnemonicParsing="false" onAction="#onEdit" prefHeight="26.0" prefWidth="110.0" text="Редактировать" />
+                                <Button layoutY="38.0" mnemonicParsing="false" onAction="#onBooks" prefHeight="26.0" prefWidth="110.0" text="Книги" />
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </TitledPane>
+                <TitledPane animated="false" text="Пользователи">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="101.0">
+                            <children>
+                                <Button fx:id="btnStatus" layoutY="6.0" mnemonicParsing="false" onAction="#onChangeAccess" prefHeight="26.0" prefWidth="110.0" text="Бан/разбан" />
+                                <Button fx:id="btnAddEmployee" layoutY="38.0" mnemonicParsing="false" onAction="#onAddEmployee" prefHeight="26.0" prefWidth="110.0" text="Добавить библиотекаря" />
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </TitledPane>
+            </panes>
+        </Accordion>
+    </children>
+</AnchorPane>
